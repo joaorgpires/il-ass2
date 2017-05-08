@@ -36,6 +36,7 @@ executeOnce (stack, e, (JOIN):c, (_, _, c'):d, store)
     = (stack, e, c', d, store) -- going back to normal program flow after exiting if
 executeOnce (stack, e, (HALT):c, d, store)
     = (stack, e, [], d, store) -- program is done
+executeOnce conf = error ("*** fail: " ++ show conf)
 
 execute :: State -> Value
 execute st@(stk,_,c,_,_) = case null c of 
