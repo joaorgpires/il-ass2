@@ -1,3 +1,11 @@
 O que fiz entretanto está no comp.hs. Possivelmente tens coisas melhor implementadas no teu repositório, estás livre de pôr aqui e alterar o que quiseres. Este ficheiro é só para nos irmos mantendo informados de cenas.
 
 Abraço autista para ti, amigo <3
+
+--
+
+ola amigo autista, coloquei o que ja tinha <3
+para compilar fazes 'stack build' mas isso vai gerar um executavel que nao faz nada, ainda nao tem nada no Main.hs. para ires testando podes fazer 'stack ghci'. precisas de ter o stack instalado (https://docs.haskellstack.org/en/stable/README/)
+os ficheiros com a magia negra propriamente dita estao na pasta src, precisava em particular que revisses a parte do 'execute' porque esta com bugs
+alguns exemplos: https://www.dcc.fc.up.pt/~pbv/aulas/linguagens/progs/Examples.hs
+
