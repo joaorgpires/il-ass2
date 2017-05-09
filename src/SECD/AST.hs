@@ -47,3 +47,20 @@ type Store = [(Addr, Closure)]
 type Closure = (Code, Env)
 
 type State = (Stack, Env, Code, Dump, Store)
+
+-- infix helper functions
+
+infixl 8 <**>, <//>
+infixl 7 <++>, <-->
+
+(<++>) :: Expr -> Expr -> Expr
+e1 <++> e2 = Add e1 e2
+
+(<-->) :: Expr -> Expr -> Expr
+e1 <--> e2 = Sub e1 e2
+
+(<**>) :: Expr -> Expr -> Expr
+e1 <**> e2 = Mul e1 e2
+
+(<//>) :: Expr -> Expr -> Expr
+e1 <//> e2 = Div e1 e2
