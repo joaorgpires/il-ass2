@@ -8,7 +8,7 @@ executeOnce (stack, e, (LDC n):c, d, store)
     = ((Int n):stack, e, c, d, store) -- load a constant
 executeOnce (stack, e, (LD addr):c, d, store)
     = (v:stack, e, c, d, store) -- load an address to a variable
-    where v = e !! addr
+    where v = e !! (addr-1)
 executeOnce (stack, e, (LDF c'):c, d, store)
     = ((Addr a):stack, e, c, d, store ++ [(a, (c', e))]) -- load a function with env stored in closure
     where a = nextAddr store
