@@ -36,8 +36,7 @@ data Value =
 
 type Var = String
 type Addr = Int
-type Sym = [(Var, Addr)]
-
+type Sym = [Var]
 type Stack = [Value]
 type Env = [Value]
 type Code = [SECD]
