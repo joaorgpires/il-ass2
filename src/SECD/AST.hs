@@ -11,12 +11,13 @@ data Expr =
     | App Expr Expr
     | Fix Expr
     | If Expr Expr Expr
+    | Let Var Expr Expr -- Preferes Var ou String?
     deriving (Show)
 
 data SECD =
     LDC Int
     | LD Int
-    | LDF Code 
+    | LDF Code
     | LDRF Code
     | ADD
     | SUB
@@ -29,9 +30,9 @@ data SECD =
     | HALT
     deriving (Show)
 
-data Value = 
-    Int Int 
-    | Addr Addr 
+data Value =
+    Int Int
+    | Addr Addr
     deriving (Show)
 
 type Var = String
