@@ -7,11 +7,11 @@ data Expr =
     | Sub Expr Expr
     | Mul Expr Expr
     | Div Expr Expr
-    | Lam String Expr
+    | Lam Var Expr
     | App Expr Expr
     | Fix Expr
     | If Expr Expr Expr
-    | Let Var Expr Expr -- Preferes Var ou String?
+    | Let Var Expr Expr
     deriving (Show)
 
 data SECD =
