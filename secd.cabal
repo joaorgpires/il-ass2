@@ -2,12 +2,12 @@ name:                secd
 version:             0.1.0.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/randrade23/secd#readme
+homepage:            https://github.com/jrbartowski/il-ass2#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Rui Andrade
-maintainer:          up201304902@fc.up.pt
-copyright:           2017 Rui Andrade
+author:              Rui Andrade, João Rebelo Pires
+maintainer:          up201304902@fc.up.pt, up201200384@fc.up.pt
+copyright:           2017 Rui Andrade, João Rebelo Pires
 category:            Compilation
 build-type:          Simple
 extra-source-files:  README.md
@@ -18,7 +18,8 @@ library
   exposed-modules:     SECD.AST,
                        SECD.Compile,
                        SECD.Execute,
-                       SECD.Table
+                       SECD.Table,
+                       SECD.Examples
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 
@@ -41,4 +42,4 @@ test-suite secd-test
 
 source-repository head
   type:     git
-  location: https://github.com/randrade23/secd
+  location: https://github.com/jrbartowski/il-ass2
