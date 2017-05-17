@@ -5,8 +5,9 @@ import Data.List (elemIndex)
 
 compile :: Expr -> Sym -> Code
 compile (Const k) _ = [LDC k]
-compile (Var x) sym = [LD i]
-    where (Just i) = (elemIndex x sym)
+compile (Var x) sym = case (elemIndex x sym) of
+  (Just i) -> [LD i]
+  (Nothing) -> error ("free variable: " ++ x)
 compile (Add e1 e2) sym = (compile e1 sym) ++ (compile e2 sym) ++ [ADD]
 compile (Sub e1 e2) sym = (compile e1 sym) ++ (compile e2 sym) ++ [SUB]
 compile (Mul e1 e2) sym = (compile e1 sym) ++ (compile e2 sym) ++ [MUL]
